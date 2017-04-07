@@ -5,13 +5,15 @@ package com.juhezi.leetcodesolutions.dp;
  */
 public class AliProblem {
 
+    static int[] array = {3, 4, 2, 1, 3, 1};
 
     /**
-     * 待解决
+     * 解决了
+     *
      * @param args
      */
     public static void main(String[] args) {
-        int[] array = {3, 1, 1, 1, 3, 1, 1, 1};
+
         int n = array.length;
         int[][] m = new int[n][n];
         int[][] s = new int[n][n];  //记录路径
@@ -21,30 +23,35 @@ public class AliProblem {
         for (int l = 1; l < n; l++) {
             for (int i = 0; i < n - l; i++) {
                 int j = i + l;
-                if (i + array[i] >= j) {
+                if (i + array[i] >= j) {    //i 可以直达 j
                     m[i][j] = 1;
+                    s[i][j] = i;
                 } else {
-                    m[i][j] = l;
+                    m[i][j] = l;    //最大值
                 }
                 for (int k = i; k < j; k++) {
                     int q = m[i][k] + m[k][j];
                     if (q < m[i][j]) {
                         m[i][j] = q;
                         s[i][j] = k;
-//                        System.out.println(i + " " + j + " " + s[i][j]);
                     }
                 }
             }
         }
-//        System.out.println(m[0][7]);
-//        print(s, 0, 7);
+        print(s, 0, 5);
+        System.out.println(array[n - 1]);
     }
 
     static void print(int[][] s, int start, int end) {
-        if (start == end) System.out.print(start + " ");
-        else {
-            print(s, start, s[start][end]);
-            print(s, s[start][end], end);
+        if (start == end) {
+            System.out.print(array[start] + ",");
+        } else {
+            if (end != s[start][end]) {
+                print(s, start, s[start][end]);
+            }
+            if (start != s[start][end]) {
+                print(s, s[start][end], end);
+            }
         }
     }
 

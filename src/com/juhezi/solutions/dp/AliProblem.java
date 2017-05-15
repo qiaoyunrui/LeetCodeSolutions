@@ -1,4 +1,4 @@
-package com.juhezi.leetcodesolutions.dp;
+package com.juhezi.solutions.dp;
 
 /**
  * Created by qiao1 on 2017/4/7.
@@ -8,7 +8,7 @@ public class AliProblem {
     static int[] array = {3, 4, 2, 1, 3, 1};
 
     /**
-     * 解决了
+     * OK
      *
      * @param args
      */

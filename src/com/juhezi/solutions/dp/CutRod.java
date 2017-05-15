@@ -1,4 +1,4 @@
-package com.juhezi.leetcodesolutions.dp;
+package com.juhezi.solutions.dp;
 
 import java.util.Stack;
 

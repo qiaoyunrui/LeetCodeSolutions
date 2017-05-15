@@ -1,4 +1,4 @@
-package com.juhezi.leetcodesolutions.dp;
+package com.juhezi.solutions.dp;
 
 /**
  * 矩阵链乘法问题

@@ -1,4 +1,4 @@
-package com.juhezi.leetcodesolutions.no1to20;
+package com.juhezi.solutions.leetcode.no1to20;
 
 /**
  * Created by qiao1 on 2017/4/4.

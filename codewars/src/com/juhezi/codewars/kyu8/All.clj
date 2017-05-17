@@ -23,3 +23,16 @@
 (defn opposite [number]
   (- number)
 )
+
+;-----------------
+;Rock Paper Scissors!
+;URL: https://www.codewars.com/kata/rock-paper-scissors/train/clojure
+(def wins #{["rock" "scissors"] ["scissors" "paper"] ["paper" "rock"]}) ;定义一个 set
+
+(defn rps [p1 p2]
+  (cond
+    (= p1 p2) "Draw!"
+    (wins [p1 p2]) "Player 1 won!"
+    :else "Player 2 won!"))
+
+;cond: 与 switch 类似

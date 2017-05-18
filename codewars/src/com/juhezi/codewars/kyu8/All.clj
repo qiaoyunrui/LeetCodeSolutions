@@ -36,3 +36,20 @@
     :else "Player 2 won!"))
 
 ;cond: 与 switch 类似
+
+;-----------------
+;Even or Odd
+;URL: https://www.codewars.com/kata/even-or-odd/train/clojure
+;判断奇偶
+(defn even-or-odd [number]
+  (if (even? number) "Even" "Odd")                          ;要善于使用内置函数
+)
+
+;Calculate average
+;https://www.codewars.com/kata/calculate-average/train/clojure
+;求平均值
+;mine
+(defn find-average
+  [numbers]
+  (/ (apply + numbers) (count numbers))
+)

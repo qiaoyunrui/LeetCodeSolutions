@@ -45,6 +45,7 @@
   (if (even? number) "Even" "Odd")                          ;要善于使用内置函数
 )
 
+;-----------------
 ;Calculate average
 ;https://www.codewars.com/kata/calculate-average/train/clojure
 ;求平均值
@@ -53,3 +54,19 @@
   [numbers]
   (/ (apply + numbers) (count numbers))
 )
+
+;------------------
+;Exclamation marks series #4: Remove all exclamation marks from sentence but ensure a exclamation mark at the end of string
+;URL: https://www.codewars.com/kata/exclamation-marks-series-number-4-remove-all-exclamation-marks-from-sentence-but-ensure-a-exclamation-mark-at-the-end-of-string/train/clojure
+;mine
+(defn remove-bang [s]
+  (str (apply str (re-seq #"[^!]" s)) "!"))                 ;str 可以拼接字符串
+
+;------------------
+;How many lightsabers do you own?
+;URL: https://www.codewars.com/kata/how-many-lightsabers-do-you-own/train/clojure
+(defn howManyLightsabersDoYouOwn
+  ([s] (cond
+    (= s "Zach") 18
+    :else 0))
+  ([] 0))

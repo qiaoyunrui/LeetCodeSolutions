@@ -1,2 +1,2 @@
-# LeetCodeSolutions
-LeetCode Solutions.
+# Solutions
+LeetCode & CodeWars Solutions.

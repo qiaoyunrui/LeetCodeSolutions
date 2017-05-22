@@ -34,3 +34,16 @@
     (Integer/parseInt s)))
   )
 
+
+;Last
+;https://www.codewars.com/kata/last/train/clojure
+;mine
+;获取最后一位，注意要判断长度是否为 0
+(defn last
+  "Returns the last element of an ISeq"
+  [lst]
+  (if (zero? (count lst))
+    nil
+    (nth (reverse lst) 0))
+  )
+

@@ -47,3 +47,21 @@
     (nth (reverse lst) 0))
   )
 
+
+;Convert a Number to a String!
+;https://www.codewars.com/kata/convert-a-number-to-a-string
+;mine
+(defn number-to-string [num]
+  (str num)
+)
+
+;Find the Slope
+;https://www.codewars.com/kata/find-the-slope/train/clojure
+;mine
+(defn slope [v]
+  (let [dx (- (v 0) (v 2))
+        dy (- (v 1) (v 3))]
+    (if (zero? dx)
+      "undefined"
+      (str (/ dy dx))))
+  )

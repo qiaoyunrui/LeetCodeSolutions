@@ -9,7 +9,7 @@
          (quot (:hp f2) (:attack f1)))
          (:name f1)
          (:name f2)))
-;quot 的使用方法
+;quot 的使用方法，整除
 ;(quot 2 3)
 ;=> 0
 ;(quot 3 2)

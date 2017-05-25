@@ -20,6 +20,12 @@
   (fn [f]
     (fn [x] (f (f x)))))
 
+;((a f) x) 执行 A 的执行过程
+;要返回一个 fn，所以是固定格式
+(defn add [a b]
+  (fn [f]
+    (fn [x] ((b f) ((a f) x)))))
+
 ;例子
 ((zero inc) 0)
 ;=> 0
@@ -32,3 +38,6 @@
 
 ((two inc) 0)
 ;=> 2
+
+(((add one two) inc) 0)
+;=> 3

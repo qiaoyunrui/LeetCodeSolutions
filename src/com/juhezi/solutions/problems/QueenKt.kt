@@ -16,7 +16,7 @@ package com.juhezi.solutions.problems
 const val queen = 10
 const val output = true //true -> 输出具体解 false -> 不输出
 
-var k = Array(queen) { Array(queen) { 0 } } //二位数组，棋盘
+var k = Array(queen) { Array(queen) { 0 } } //二维数组，棋盘
 var queens = Array(queen) { -1 }    //存放皇后的位置
 var count = 0   //布局种类
 

@@ -1,5 +1,5 @@
 (ns com.juhezi.sicp.Queen)
-;八皇后
+;八皇后，依然看不懂
 
 (defn is-valid-addition?
   "判断位置是否有效"
@@ -19,3 +19,5 @@
 (defn solve-for-board-size [board-size]
   (nth (iterate (fn [boards] (add-to-boards boards board-size)) [[]]) board-size))
 
+;not-any?
+;Returns false if (pred x) is logical true for any x in coll,else true.

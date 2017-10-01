@@ -17,3 +17,6 @@
 ;从 2 开始的素数序列
 (defn prime-numbers []
   (rest (rest (filter prime? (lazy-seq (range))))))
+
+(defn divider [n]
+  (first (filter #(= (mod n %) 0) (range (int (Math/sqrt n)) n))))

@@ -2,7 +2,8 @@
 
 ; URL: https://www.codewars.com/kata/54521e9ec8e60bc4de000d6c/train/clojure
 ; Maximum subarray sum
-; Need Study
+; Do not understand
+
 (defn max-fold
   [[max-here max-so-far] x]
   (let [max-here (max 0 (+ max-here x))]
